@@ -13,8 +13,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if request:
         try:
             # url = "mongodb://127.0.0.1:27017"  # TODO: Update with appropriate MongoDB connection information
-            # url = "mongodb://neighborlycmwestdb:TCriehv6QJp4e5PNLwmyeEBYbfzMd39K3xyqIkPiwuoUSV6I4NCjEEITLJytFZFQ4B4RCgn8ANDHeyiCwpYB9A==@neighborlycmwestdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@neighborlycmwestdb@"
-            url = os.environ["AzureMongoDBConnString"]
+            url = "mongodb://neighborlycmwestdb:Ig5RtWMeUa9cCIc2h6uxJeg4BFySAT2CLAaFuf1kWihivWSNPLFqxabv9FxOVH1CcXv2eLu9MHl6LJHCs4p6Jw==@neighborlycmwestdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@neighborlycmwestdb@"
+            # url = os.environ["AzureMongoDBConnString"]
             client = pymongo.MongoClient(url)
             database = client['azure']
             collection = database['ads']
