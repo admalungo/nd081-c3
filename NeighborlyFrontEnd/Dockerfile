@@ -8,11 +8,12 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 COPY requirements.txt /
 RUN pip install -r /requirements.txt
 
-# ENV FLASK_APP=app.py
 WORKDIR /home/site/wwwroot
 
 COPY . /home/site/wwwroot
 
-# ENTRYPOINT ["python"]
+# ENTRYPOINT FLASK_APP=/home/site/wwwroot/app.py flask run
 
-# CMD ["app.py"]
+# EXPOSE 5000
+
+CMD ["python", "app.py"]
